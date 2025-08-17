@@ -69,7 +69,7 @@ module Steuer
       end
     end
 
-    def state
+    def state_name
       return unless @state_code
 
       StateMapping::STATES[@state_code][:name]

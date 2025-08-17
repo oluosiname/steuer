@@ -230,6 +230,24 @@ RSpec.describe Steuer::Steuernummer do
     end
   end
 
+  describe 'state_name method' do
+    it 'returns the full state name for valid state codes' do
+      tax_number = described_class.new('93/815/08152', state: 'BW')
+      expect(tax_number.state_name).to eq('Baden-Württemberg')
+    end
+
+    it 'returns the full state name for different states' do
+      bayern = described_class.new('181/815/08155', state: 'BY')
+      expect(bayern.state_name).to eq('Bayern')
+
+      hessen = described_class.new('013/815/08153', state: 'HE')
+      expect(hessen.state_name).to eq('Hessen')
+
+      saarland = described_class.new('010/815/08182', state: 'SL')
+      expect(saarland.state_name).to eq('Saarland')
+    end
+  end
+
   describe 'auto-detection vs explicit state' do
     it 'auto-detects unambiguous standard formats' do
       tax_number = described_class.new('93/815/08152') # BW pattern
