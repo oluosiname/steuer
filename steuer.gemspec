@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.files         = Dir['lib/**/*', 'README.md', 'LICENSE']
   spec.require_paths = ['lib']
 
+  spec.add_development_dependency 'pry', '~> 0.15.1'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 1.56.0'
