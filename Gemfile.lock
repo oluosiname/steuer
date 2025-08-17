@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    steuer (0.2.0.pre.alpha)
+    steuer (0.3.0.pre.alpha)
 
 GEM
   remote: https://rubygems.org/

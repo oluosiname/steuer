@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'steuer'
-  spec.version       = '0.2.0-alpha'
+  spec.version       = '0.3.0-alpha'
   spec.authors       = ['Olumuyiwa Osiname']
   spec.email         = ['oluosiname@gmail.com']
 
@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-rspec', '~> 2.24.0'
   spec.add_development_dependency 'rubocop-shopify', '~> 2.14'
 
-  spec.required_ruby_version = '>= 3.3.0'
+  spec.required_ruby_version = '>= 3.2.0'
 end
