@@ -1,3 +1,7 @@
+[![Release Ruby Gem](https://github.com/oluosiname/steuer/actions/workflows/release.yml/badge.svg)](https://github.com/oluosiname/steuer/actions/workflows/release.yml)
+
+[![Ruby](https://github.com/oluosiname/steuer/actions/workflows/test.yml/badge.svg)](https://github.com/oluosiname/steuer/actions/workflows/test.yml)
+
 # Steuer
 
 A Ruby gem for German tax system utilities, including Steuernummer (tax number) conversion between different formats and validation.
