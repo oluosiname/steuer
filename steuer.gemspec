@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'steuer'
-  spec.version       = Steuer::VERSION
+  spec.version       = '1.0.2'
   spec.authors       = ['Olumuyiwa Osiname']
   spec.email         = ['oluosiname@gmail.com']
 
