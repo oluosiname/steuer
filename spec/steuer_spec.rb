@@ -14,13 +14,15 @@ RSpec.describe Steuer do
       expect(tax_number.state_code).to eq('BW')
     end
 
-    it 'auto-detects state from standard format' do
-      tax_number = described_class.steuernummer('93/815/08152')  # No state provided
-      expect(tax_number.state_code).to eq('BW')
+    it 'requires state for ambiguous standard format' do
+      # 93/815/08152 matches multiple states (BW, BE, HB, HH, NI, RP, SH)
+      expect do
+        described_class.steuernummer('93/815/08152') # No state provided
+      end.to raise_error(Steuer::UnsupportedStateError, /Cannot determine state/)
     end
 
     it 'auto-detects state from unambiguous federal format' do
-      tax_number = described_class.steuernummer('289381508152')  # BW has unique prefix '28'
+      tax_number = described_class.steuernummer('289381508152') # BW has unique prefix '28'
       expect(tax_number.state_code).to eq('BW')
     end
 

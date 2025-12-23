@@ -133,9 +133,20 @@ module Steuer
           end
         end
 
-        sorted_states.each do |code, config|
-          return code if tax_number.match?(config[:standard_pattern])
+        # Find all states that match the pattern
+        matching_states = sorted_states.select do |_code, config|
+          tax_number.match?(config[:standard_pattern])
         end
+
+        # If only one state matches, return it (unambiguous)
+        return matching_states.first[0] if matching_states.length == 1
+
+        # If multiple states match (ambiguous), return nil
+        # This will trigger the error requiring explicit state parameter
+        # (same behavior as ambiguous federal prefixes like '3' or '4')
+        return if matching_states.length > 1
+
+        # No matches
         nil
       end
 

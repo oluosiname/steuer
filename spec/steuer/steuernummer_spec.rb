@@ -9,7 +9,7 @@ RSpec.describe Steuer::Steuernummer do
     let(:federal_13) { '2893081508152' }
 
     context 'with standard format' do
-      subject(:steuernummer) { described_class.new(standard) } # Auto-detect state
+      subject(:steuernummer) { described_class.new(standard, state: 'BW') } # Explicit state (pattern is ambiguous)
 
       it 'is valid' do
         expect(steuernummer.valid?).to be true
@@ -250,7 +250,9 @@ RSpec.describe Steuer::Steuernummer do
 
   describe 'auto-detection vs explicit state' do
     it 'auto-detects unambiguous standard formats' do
-      tax_number = described_class.new('93/815/08152') # BW pattern
+      # NOTE: 93/815/08152 is actually ambiguous (matches multiple states)
+      # This test is kept for backward compatibility but now requires explicit state
+      tax_number = described_class.new('93/815/08152', state: 'BW') # Explicit state required
       expect(tax_number.state_code).to eq('BW')
     end
 
@@ -318,6 +320,77 @@ RSpec.describe Steuer::Steuernummer do
       expect do
         described_class.new('93/815/08152', state: 'BY') # BW number with BY state
       end.to raise_error(Steuer::InvalidTaxNumberError)
+    end
+
+    it 'requires explicit state for ambiguous standard formats' do
+      # Test ambiguous standard format cases
+      # Pattern FF/BBB/UUUUP is shared by: BW, BE, HB, HH, NI, RP, SH
+      ambiguous_standard_cases = [
+        '32/462/02550',  # Could be BW, BE, HB, HH, NI, RP, or SH
+        '21/815/08150',  # Could be BW, BE, HB, HH, NI, RP, or SH
+        '93/815/08152',  # Could be BW, BE, HB, HH, NI, RP, or SH
+      ]
+
+      ambiguous_standard_cases.each do |tax_number|
+        expect do
+          described_class.new(tax_number)
+        end.to raise_error(Steuer::UnsupportedStateError, /Cannot determine state/)
+      end
+    end
+
+    it 'requires explicit state for ambiguous FFF/BBB/UUUUP standard formats' do
+      # Pattern FFF/BBB/UUUUP is shared by: BY, BB, MV, SN, ST, TH
+      ambiguous_fff_cases = [
+        '181/815/08155',  # Could be BY, BB, MV, SN, ST, or TH
+        '048/815/08155',  # Could be BY, BB, MV, SN, ST, or TH
+        '201/815/08156',  # Could be BY, BB, MV, SN, ST, or TH
+      ]
+
+      ambiguous_fff_cases.each do |tax_number|
+        expect do
+          described_class.new(tax_number)
+        end.to raise_error(Steuer::UnsupportedStateError, /Cannot determine state/)
+      end
+    end
+
+    it 'works with explicit state for ambiguous standard format cases' do
+      # Test that ambiguous standard formats work with explicit state
+      ambiguous_standard_test_cases = [
+        { tax_number: '32/462/02550', state: 'BE' },  # Berlin
+        { tax_number: '32/462/02550', state: 'BW' },  # Baden-Württemberg
+        { tax_number: '21/815/08150', state: 'BE' },  # Berlin
+        { tax_number: '93/815/08152', state: 'BW' },  # Baden-Württemberg
+        { tax_number: '181/815/08155', state: 'BY' },  # Bayern
+        { tax_number: '048/815/08155', state: 'BB' },  # Brandenburg
+      ]
+
+      ambiguous_standard_test_cases.each do |test_case|
+        tax_number = described_class.new(test_case[:tax_number], state: test_case[:state])
+        expect(tax_number.state_code).to eq(test_case[:state])
+        expect(tax_number.valid?).to be true
+      end
+    end
+
+    it 'auto-detects unambiguous standard formats with unique patterns' do
+      # Only NW has a truly unique pattern (FFF/BBBB/UUUP)
+      # HE and SL patterns are ambiguous (also match general FFF/BBB/UUUUP)
+      tax_number = described_class.new('133/8150/8159')
+      expect(tax_number.state_code).to eq('NW')
+      expect(tax_number.valid?).to be true
+    end
+
+    it 'requires explicit state for ambiguous patterns that match multiple formats' do
+      # These match both specific patterns and general patterns
+      ambiguous_specific_cases = [
+        '013/815/08153',  # Matches HE and general FFF/BBB/UUUUP
+        '010/815/08182',  # Matches SL and general FFF/BBB/UUUUP
+      ]
+
+      ambiguous_specific_cases.each do |tax_number|
+        expect do
+          described_class.new(tax_number)
+        end.to raise_error(Steuer::UnsupportedStateError, /Cannot determine state/)
+      end
     end
   end
 
