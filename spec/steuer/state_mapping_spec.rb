@@ -4,24 +4,34 @@ require 'spec_helper'
 
 RSpec.describe Steuer::StateMapping do
   describe '.find_state_by_standard_format' do
-    it 'detects Baden-Württemberg from FF/BBB/UUUUP pattern' do
+    it 'returns nil for ambiguous FF/BBB/UUUUP pattern' do
+      # Pattern is shared by: BW, BE, HB, HH, NI, RP, SH
       result = described_class.find_state_by_standard_format('93/815/08152')
-      expect(result).to eq('BW')
+      expect(result).to be_nil
     end
 
-    it 'detects Bayern from FFF/BBB/UUUUP pattern' do
+    it 'returns nil for ambiguous FFF/BBB/UUUUP pattern' do
+      # Pattern is shared by: BY, BB, MV, SN, ST, TH
       result = described_class.find_state_by_standard_format('181/815/08155')
-      expect(result).to eq('BY')
+      expect(result).to be_nil
     end
 
-    it 'detects Nordrhein-Westfalen from FFF/BBBB/UUUP pattern' do
+    it 'detects Nordrhein-Westfalen from unique FFF/BBBB/UUUP pattern' do
+      # NW has unique pattern FFF/BBBB/UUUP
       result = described_class.find_state_by_standard_format('133/8150/8159')
       expect(result).to eq('NW')
     end
 
-    it 'detects Hessen from 0FF/BBB/UUUUP pattern' do
+    it 'returns nil for ambiguous 0FF/BBB/UUUUP pattern' do
+      # 013/815/08153 matches both HE pattern and general FFF/BBB/UUUUP pattern (BY, BB, MV, SN, ST, TH)
       result = described_class.find_state_by_standard_format('013/815/08153')
-      expect(result).to eq('HE')
+      expect(result).to be_nil
+    end
+
+    it 'returns nil for ambiguous Saarland pattern' do
+      # 010/815/08182 matches both SL pattern and general FFF/BBB/UUUUP pattern (BY, BB, MV, SN, ST, TH)
+      result = described_class.find_state_by_standard_format('010/815/08182')
+      expect(result).to be_nil
     end
 
     it 'returns nil for invalid format' do
