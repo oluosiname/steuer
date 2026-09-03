@@ -119,6 +119,66 @@ module Steuer
       },
     }.freeze
     class << self
+      def standard_group_sizes(state_code)
+        config = STATES[state_code]
+        return unless config
+
+        sizes = config[:standard_pattern].source.delete_prefix('^').delete_suffix('$')
+          .split('/')
+          .map { |group| standard_group_size(group) }
+
+        return if sizes.any?(&:nil?) || sizes.empty?
+
+        sizes
+      end
+
+      # Ranges such as Hessen's 0(1[3-9]) and Saarland's (01[0-2]) stand in
+      # for single digits, so groups are measured rather than read off \d{n}.
+      def standard_group_size(group)
+        size = 0
+        scanner = group.dup
+        until scanner.empty?
+          case scanner
+          when /\A\\d\{(\d+)\}/
+            size += Regexp.last_match(1).to_i
+            scanner = scanner.sub(/\A\\d\{\d+\}/, '')
+          when /\A\[[^\]]*\]/
+            size += 1
+            scanner = scanner.sub(/\A\[[^\]]*\]/, '')
+          when /\A\\d/
+            size += 1
+            scanner = scanner.delete_prefix('\\d')
+          when /\A\d/
+            size += 1
+            scanner = scanner[1..]
+          when /\A[()]/
+            scanner = scanner[1..]
+          else
+            return
+          end
+        end
+        size
+      end
+
+      # Separators are presentation only: Baden-Württemberg prints 93815/08152
+      # for the ten digits the BZSt Standardschema groups as 93/815/08152.
+      def canonicalize_standard_format(tax_number, state_code)
+        sizes = standard_group_sizes(state_code)
+        return unless sizes
+
+        digits = tax_number.gsub(/\D/, '')
+        return unless digits.length == sizes.sum
+
+        offset = 0
+        groups = sizes.map do |size|
+          part = digits[offset, size]
+          offset += size
+          part
+        end
+
+        groups.join('/')
+      end
+
       def find_state_by_standard_format(tax_number)
         # Try more specific patterns first to avoid conflicts with general patterns
         # Priority: character classes with ranges > specific digit patterns > general digit patterns
