@@ -3,6 +3,56 @@
 require 'spec_helper'
 
 RSpec.describe Steuer::Steuernummer do
+  describe 'separator grouping tolerance' do
+    # Separators are presentation only: Baden-Württemberg prints its
+    # Steuernummer as 93815/08152 while the BZSt Standardschema groups the
+    # same ten digits as 93/815/08152. Both must validate identically.
+    it 'accepts the 5/5 grouping Baden-Württemberg prints' do
+      steuernummer = described_class.new('93815/08152', state: 'BW')
+
+      expect(steuernummer).to be_valid
+      expect(steuernummer.to_federal_13).to eq('2893081508152')
+    end
+
+    it 'produces the same federal form regardless of grouping' do
+      printed = described_class.new('93815/08152', state: 'BW')
+      canonical = described_class.new('93/815/08152', state: 'BW')
+
+      expect(printed.to_federal_13).to eq(canonical.to_federal_13)
+      expect(printed.to_federal_12).to eq(canonical.to_federal_12)
+    end
+
+    it 'normalises to_standard to the canonical BZSt grouping' do
+      expect(described_class.new('93815/08152', state: 'BW').to_standard)
+        .to eq('93/815/08152')
+    end
+
+    it 'accepts an unseparated standard-format number' do
+      expect(described_class.new('9381508152', state: 'BW').to_federal_13)
+        .to eq('2893081508152')
+    end
+
+    it 'accepts regrouped numbers for other states' do
+      expect(described_class.new('1338150/8159', state: 'NW').to_federal_13)
+        .to eq('5133081508159')
+      expect(described_class.new('181815/08155', state: 'BY').to_federal_13)
+        .to eq('9181081508155')
+    end
+
+    it 'still rejects a number whose digit count is wrong for the state' do
+      expect { described_class.new('93815/0815', state: 'BW') }
+        .to raise_error(Steuer::InvalidTaxNumberError)
+      expect { described_class.new('93815/081521', state: 'BW') }
+        .to raise_error(Steuer::InvalidTaxNumberError)
+    end
+
+    it 'still rejects a number belonging to a different state shape' do
+      # 11 digits is Bayern's length, not Baden-Württemberg's 10
+      expect { described_class.new('181/815/08155', state: 'BW') }
+        .to raise_error(Steuer::InvalidTaxNumberError)
+    end
+  end
+
   describe 'Baden-Württemberg examples' do
     let(:standard) { '93/815/08152' }
     let(:federal_12) { '289381508152' }

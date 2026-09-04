@@ -8,7 +8,8 @@ module Steuer
 
     def initialize(tax_number, state: nil)
       @original_input = tax_number.to_s.strip
-      @state_code = normalize_state_code(state) || auto_detect_state
+      @explicit_state_code = normalize_state_code(state)
+      @state_code = @explicit_state_code || auto_detect_state
 
       validate_tax_number!
     end
@@ -61,7 +62,7 @@ module Steuer
 
       case format_type
       when :standard
-        @original_input
+        canonical_standard_input || @original_input
       when :federal_12
         convert_federal_12_to_standard
       when :federal_13
@@ -82,6 +83,8 @@ module Steuer
         :federal_12
       elsif normalized_input.length == 13 && normalized_input.match?(/^\d{13}$/)
         :federal_13
+      elsif unseparated_standard?
+        :standard
       end
 
       @format_type
@@ -178,7 +181,24 @@ module Steuer
 
     def validate_standard_format
       config = StateMapping::STATES[@state_code]
-      normalized_input.match?(config[:standard_pattern])
+      return true if normalized_input.match?(config[:standard_pattern])
+
+      canonical = canonical_standard_input
+      !canonical.nil? && canonical.match?(config[:standard_pattern])
+    end
+
+    def unseparated_standard?
+      return false unless @explicit_state_code
+      return false unless normalized_input.match?(/\A\d+\z/)
+
+      sizes = StateMapping.standard_group_sizes(@explicit_state_code)
+      !sizes.nil? && normalized_input.length == sizes.sum
+    end
+
+    def canonical_standard_input
+      return unless @state_code
+
+      StateMapping.canonicalize_standard_format(normalized_input, @state_code)
     end
 
     def validate_federal_12_format
@@ -200,7 +220,8 @@ module Steuer
     def convert_standard_to_federal_12
       config = StateMapping::STATES[@state_code]
 
-      match = normalized_input.match(config[:standard_pattern])
+      match = normalized_input.match(config[:standard_pattern]) ||
+        canonical_standard_input&.match(config[:standard_pattern])
       return unless match
 
       parts = match.captures
