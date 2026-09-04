@@ -215,7 +215,7 @@ To refresh the bundled table from BZSt:
 bundle exec rake update_finanzaemter
 ```
 
-This also runs automatically: a scheduled workflow regenerates the table the day after each BZSt publication (the 2nd and 16th) and opens a pull request when the data has actually changed, summarising which offices were added, removed or renamed.
+The same refresh can be run from GitHub Actions (**Update Finanzamt table** → *Run workflow*), which opens a pull request when the data has actually changed, summarising which offices were added, removed or renamed.
 
 BZSt publishes GemFA only as a bulk XML export — there is no per-office lookup API — so the table is bundled rather than fetched at runtime. Lookups stay a local hash read with no network dependency.
 

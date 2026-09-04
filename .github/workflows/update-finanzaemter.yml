@@ -1,15 +1,16 @@
 # Refreshes the bundled Finanzamt table from the BZSt GemFA export.
 #
-# BZSt republishes GemFA on the 1st and 15th of each month, so this runs the
-# day after each publication and opens a PR only when the data actually
-# differs. The PR body summarises which offices were added, removed or
-# renamed, so the 1700-line YAML diff does not have to be read directly.
+# Run manually (Actions -> Update Finanzamt table -> Run workflow) when the
+# bundled table should be brought up to date, typically before cutting a
+# release. BZSt republishes GemFA on the 1st and 15th of each month.
+#
+# Opens a PR only when the data actually differs. The PR body summarises which
+# offices were added, removed or renamed, so the 1700-line YAML diff does not
+# have to be read directly.
 
 name: Update Finanzamt table
 
 on:
-  schedule:
-    - cron: "17 6 2,16 * *"
   workflow_dispatch:
 
 permissions:

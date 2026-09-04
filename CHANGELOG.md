@@ -8,7 +8,7 @@
   * Unknown or retired codes return `nil` rather than raising, so a number issued after the bundled revision still converts — it just has no name yet.
   * `.state_for` is `nil` where a federal prefix is shared between states (`3` → BB/SN/ST, `4` → MV/TH), matching the gem's existing ambiguity handling.
 * Add `rake update_finanzaemter` to regenerate the bundled table from the BZSt GemFA export.
-* Add a scheduled workflow that refreshes the table on the 2nd and 16th of each month (the day after each BZSt publication) and opens a pull request only when the data differs, with a summary of added, removed and renamed offices.
+* Add a manually triggered workflow that refreshes the table and opens a pull request only when the data differs, with a summary of added, removed and renamed offices.
 
 ## 1.1.0 - 2026-09-04
 
