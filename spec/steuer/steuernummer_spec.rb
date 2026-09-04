@@ -481,4 +481,41 @@ RSpec.describe Steuer::Steuernummer do
       end
     end
   end
+  describe '#finanzamt_code' do
+    it 'is the leading four digits of the federal-13 form' do
+      steuernummer = described_class.new('93/815/08152', state: 'BW')
+
+      expect(steuernummer.finanzamt_code).to eq(steuernummer.to_federal_13[0, 4])
+      expect(steuernummer.finanzamt_code).to eq('2893')
+    end
+
+    it 'is identical across every input format for the same number' do
+      codes = [
+        described_class.new('93/815/08152', state: 'BW'),
+        described_class.new('289381508152'),
+        described_class.new('2893081508152'),
+      ].map(&:finanzamt_code)
+
+      expect(codes.uniq).to eq(['2893'])
+    end
+
+    it 'handles states whose standard grouping differs' do
+      expect(described_class.new('133/8150/8159', state: 'NW').finanzamt_code).to eq('5133')
+      expect(described_class.new('010/815/08182', state: 'SL').finanzamt_code).to eq('1010')
+    end
+  end
+
+  describe '#finanzamt_name' do
+    it 'resolves the office name from the bundled BUFA table' do
+      expect(described_class.new('010/815/08182', state: 'SL').finanzamt_name).to eq('Saarlouis')
+    end
+
+    it 'returns nil when the code is absent from the bundled table' do
+      steuernummer = described_class.new('02/815/08156', state: 'HH')
+
+      expect(steuernummer.finanzamt_code).to eq('2202')
+      expect(steuernummer.finanzamt_name).to be_nil
+    end
+  end
+
 end

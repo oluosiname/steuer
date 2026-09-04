@@ -2,6 +2,7 @@
 
 require_relative 'steuer/version'
 require_relative 'steuer/steuernummer'
+require_relative 'steuer/finanzamt_registry'
 require_relative 'steuer/errors'
 
 module Steuer

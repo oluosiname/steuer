@@ -58,6 +58,10 @@ puts tax_number.format_type   # => :standard
 puts tax_number.to_federal_12  # => "289381508152"
 puts tax_number.to_federal_13  # => "2893081508152"
 puts tax_number.to_standard    # => "93/815/08152"
+
+# Identify the issuing Finanzamt
+puts tax_number.finanzamt_code  # => "2893"
+puts tax_number.finanzamt_name  # => "Stuttgart I"
 ```
 
 ### Auto-Detection vs Explicit State
@@ -170,6 +174,48 @@ Creates a new `Steuer::Steuernummer` object.
 - `state_name` - Returns the full state name (e.g., "Baden-Württemberg")
 - `format_type` - Returns the detected format (`:standard`, `:federal_12`, or `:federal_13`)
 - `original_input` - Returns the original input string
+- `finanzamt_code` - Returns the four-digit Bundesfinanzamtsnummer (BUFA-Nr)
+- `finanzamt_name` - Returns the Finanzamt's name, or `nil` if the code is not in the bundled table
+
+## Finanzamt Lookup
+
+The first four digits of the 13-digit federal form are the **Bundesfinanzamtsnummer** (BUFA-Nr), identifying the issuing tax office — the `Empfaenger` in an ELSTER transmission.
+
+```ruby
+tax_number = Steuer.steuernummer('010/815/08182', state: 'SL')
+
+tax_number.finanzamt_code  # => "1010"
+tax_number.finanzamt_name  # => "Saarlouis"
+```
+
+`finanzamt_code` is derived arithmetically and always available for a valid number. `finanzamt_name` is a lookup against a bundled copy of the BZSt **GemFA** directory (Gesamtverzeichnis der Finanzämter).
+
+### Direct registry access
+
+```ruby
+Steuer::FinanzamtRegistry.name_for('1010')   # => "Saarlouis"
+Steuer::FinanzamtRegistry.state_for('1010')  # => "SL"
+Steuer::FinanzamtRegistry.known?('9999')     # => false
+Steuer::FinanzamtRegistry.revision           # => "2026-09-02"
+```
+
+### Data freshness
+
+Unlike the structural state data, Finanzamt names go stale — offices merge, split and get renamed, and **BZSt republishes GemFA on the 1st and 15th of every month**.
+
+Lookups therefore return `nil` rather than raising, so a number issued after the bundled revision still converts and validates; only the name is missing. Check `FinanzamtRegistry.revision` to see the bundled snapshot date, and fall back where a name is required:
+
+```ruby
+label = tax_number.finanzamt_name || tax_number.finanzamt_code
+```
+
+To refresh the bundled table from BZSt:
+
+```bash
+bundle exec rake update_finanzaemter
+```
+
+`state_for` returns `nil` where a federal prefix is shared between states (`3` → BB/SN/ST, `4` → MV/TH), consistent with how the gem treats ambiguous prefixes elsewhere.
 
 ## Development
 
