@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 - 2026-09-04
 
 * Add `Steuernummer#finanzamt_code`, returning the four-digit Bundesfinanzamtsnummer (BUFA-Nr) — the leading four digits of the federal-13 form — so callers no longer slice the converted number themselves.
 * Add `Steuernummer#finanzamt_name`, resolving that code to the tax office's name via a bundled copy of the BZSt GemFA directory (594 offices, revision 2026-09-02).
