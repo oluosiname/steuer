@@ -14,3 +14,8 @@ desc 'Open an irb session preloaded with this library'
 task :console do
   sh 'irb -rubygems -I lib -r steuer'
 end
+
+desc 'Refresh the bundled Finanzamt table from the BZSt GemFA export'
+task :update_finanzaemter do
+  ruby 'tasks/update_finanzaemter.rb'
+end

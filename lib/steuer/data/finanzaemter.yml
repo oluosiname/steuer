@@ -1,0 +1,1711 @@
+---
+revision: '2026-09-02'
+source: BZSt GemFA (Gesamtverzeichnis der Finanzaemter)
+finanzaemter:
+  '1010':
+    name: Saarlouis
+    state: SL
+  '1020':
+    name: Merzig
+    state: SL
+  '1030':
+    name: Neunkirchen
+    state: SL
+  '1040':
+    name: Saarbrücken I
+    state: SL
+  '1055':
+    name: Saarbrücken II
+    state: SL
+  '1060':
+    name: St. Wendel
+    state: SL
+  '1075':
+    name: Homburg
+    state: SL
+  '1085':
+    name: Homburg - Außenst. St. Ingbert
+    state: SL
+  '1113':
+    name: Charlottenburg
+    state: BE
+  '1114':
+    name: Friedrichshain-Kreuzberg
+    state: BE
+  '1115':
+    name: Berlin International
+    state: BE
+  '1116':
+    name: Neukölln
+    state: BE
+  '1117':
+    name: Reinickendorf
+    state: BE
+  '1118':
+    name: Schöneberg
+    state: BE
+  '1119':
+    name: Spandau
+    state: BE
+  '1120':
+    name: Steglitz
+    state: BE
+  '1121':
+    name: Tempelhof
+    state: BE
+  '1123':
+    name: Wedding
+    state: BE
+  '1124':
+    name: Wilmersdorf
+    state: BE
+  '1125':
+    name: Zehlendorf
+    state: BE
+  '1127':
+    name: für Körperschaften I
+    state: BE
+  '1129':
+    name: für Körperschaften III
+    state: BE
+  '1130':
+    name: für Körperschaften IV
+    state: BE
+  '1131':
+    name: Prenzlauer Berg
+    state: BE
+  '1132':
+    name: Lichtenberg
+    state: BE
+  '1133':
+    name: Marzahn-Hellersdorf
+    state: BE
+  '1134':
+    name: Mitte/Tiergarten
+    state: BE
+  '1135':
+    name: Pankow/Weißensee
+    state: BE
+  '1136':
+    name: Treptow-Köpenick
+    state: BE
+  '1137':
+    name: für Körperschaften II
+    state: BE
+  '1138':
+    name: für Fahndung und Strafsachen Berlin
+    state: BE
+  '1191':
+    name: Technisches Finanzamt Berlin
+    state: BE
+  '2111':
+    name: Bad Segeberg
+    state: SH
+  '2113':
+    name: Elmshorn
+    state: SH
+  '2115':
+    name: Flensburg
+    state: SH
+  '2116':
+    name: Dithmarschen
+    state: SH
+  '2117':
+    name: Nordfriesland
+    state: SH
+  '2118':
+    name: Itzehoe
+    state: SH
+  '2120':
+    name: Kiel
+    state: SH
+  '2122':
+    name: Lübeck
+    state: SH
+  '2124':
+    name: Neumünster
+    state: SH
+  '2125':
+    name: Ostholstein
+    state: SH
+  '2126':
+    name: Plön
+    state: SH
+  '2127':
+    name: Ratzeburg
+    state: SH
+  '2128':
+    name: Rendsburg
+    state: SH
+  '2129':
+    name: Eckernförde-Schleswig
+    state: SH
+  '2130':
+    name: Stormarn
+    state: SH
+  '2131':
+    name: Pinneberg
+    state: SH
+  '2137':
+    name: Zentrale Prüfungsdienste
+    state: SH
+  '2171':
+    name: Bad Segeberg Bewertung für Grundsteuer 71
+    state: SH
+  '2172':
+    name: Eckernförde-Schleswig Bewertung für Grundsteuer 72
+    state: SH
+  '2173':
+    name: Elmshorn Bewertung für Grundsteuer 73
+    state: SH
+  '2175':
+    name: Flensburg Bewertung für Grundsteuer 75
+    state: SH
+  '2176':
+    name: Dithmarschen Bewertung für Grundsteuer 76
+    state: SH
+  '2177':
+    name: Nordfriesland Bewertung für Grundsteuer 77
+    state: SH
+  '2178':
+    name: Itzehoe Bewertung für Grundsteuer 78
+    state: SH
+  '2179':
+    name: Kiel Bewertung für Grundsteuer 79
+    state: SH
+  '2180':
+    name: Kiel Bewertung für Grundsteuer 80
+    state: SH
+  '2181':
+    name: Nordfriesland Bewertung für Grundsteuer 81
+    state: SH
+  '2182':
+    name: Lübeck Bewertung für Grundsteuer 82
+    state: SH
+  '2183':
+    name: Dithmarschen Bewertung für Grundsteuer 83
+    state: SH
+  '2184':
+    name: Neumünster Bewertung für Grundsteuer 84
+    state: SH
+  '2185':
+    name: Ostholstein Bewertung für Grundsteuer 85
+    state: SH
+  '2186':
+    name: Plön Bewertung für Grundsteuer 86
+    state: SH
+  '2187':
+    name: Ratzeburg Bewertung für Grundsteuer 87
+    state: SH
+  '2188':
+    name: Rendsburg Bewertung für Grundsteuer 88
+    state: SH
+  '2189':
+    name: Eckernförde-Schleswig Bewertung für Grundsteuer 89
+    state: SH
+  '2190':
+    name: Stormarn Bewertung für Grundsteuer 90
+    state: SH
+  '2191':
+    name: Pinneberg Bewertung für Grundsteuer 91
+    state: SH
+  '2201':
+    name: Hamburg für Steuererhebung in Hamburg
+    state: HH
+  '2210':
+    name: Hamburg für Verkehrst. und Grundbesitz
+    state: HH
+  '2216':
+    name: Hamburg für Verkehrst. und Grundbesitz
+    state: HH
+  '2217':
+    name: Hamburg-Nord
+    state: HH
+  '2220':
+    name: Hamburg für Verkehrst. und Grundbesitz
+    state: HH
+  '2227':
+    name: Hamburg für Großunternehmen in Hamburg
+    state: HH
+  '2228':
+    name: Hamburg für Prüfungsd. und Strafsachen
+    state: HH
+  '2230':
+    name: Hamburg für Verkehrst. und Grundbesitz
+    state: HH
+  '2235':
+    name: Hamburg für Verkehrst. und Grundbesitz
+    state: HH
+  '2241':
+    name: Hamburg-Altona
+    state: HH
+  '2242':
+    name: Hamburg-Am Tierpark
+    state: HH
+  '2243':
+    name: Hamburg-Barmbek-Uhlenhorst
+    state: HH
+  '2244':
+    name: Hamburg-Ost
+    state: HH
+  '2245':
+    name: Hamburg-Eimsbüttel
+    state: HH
+  '2246':
+    name: Hamburg-Hansa
+    state: HH
+  '2247':
+    name: Hamburg-Harburg
+    state: HH
+  '2248':
+    name: Hamburg-Mitte
+    state: HH
+  '2249':
+    name: Hamburg-Nord
+    state: HH
+  '2250':
+    name: Hamburg-Oberalster
+    state: HH
+  '2251':
+    name: Hamburg-Ost
+    state: HH
+  '2313':
+    name: Braunschweig-Helmstedt
+    state: NI
+  '2314':
+    name: Braunschweig-Wilhelmstraße
+    state: NI
+  '2315':
+    name: Buchholz in der Nordheide
+    state: NI
+  '2316':
+    name: Burgdorf
+    state: NI
+  '2317':
+    name: Celle
+    state: NI
+  '2318':
+    name: Cuxhaven
+    state: NI
+  '2319':
+    name: Gifhorn
+    state: NI
+  '2320':
+    name: Göttingen
+    state: NI
+  '2321':
+    name: Goslar-Bad Gandersheim
+    state: NI
+  '2322':
+    name: Hameln-Holzminden
+    state: NI
+  '2323':
+    name: Hannover-Land I
+    state: NI
+  '2324':
+    name: Hannover-Mitte
+    state: NI
+  '2325':
+    name: Hannover-Nord
+    state: NI
+  '2326':
+    name: Hannover-Süd
+    state: NI
+  '2327':
+    name: Hannover-Land II
+    state: NI
+  '2328':
+    name: Helmstedt
+    state: NI
+  '2330':
+    name: Hildesheim-Alfeld
+    state: NI
+  '2331':
+    name: Holzminden
+    state: NI
+  '2333':
+    name: Lüneburg
+    state: NI
+  '2334':
+    name: Nienburg/Weser
+    state: NI
+  '2335':
+    name: Northeim-Herzberg am Harz
+    state: NI
+  '2336':
+    name: Osterholz-Scharmbeck
+    state: NI
+  '2338':
+    name: Peine
+    state: NI
+  '2340':
+    name: Rotenburg (Wümme)
+    state: NI
+  '2341':
+    name: Soltau
+    state: NI
+  '2343':
+    name: Stade
+    state: NI
+  '2344':
+    name: Stadthagen
+    state: NI
+  '2345':
+    name: Sulingen
+    state: NI
+  '2346':
+    name: Syke
+    state: NI
+  '2347':
+    name: Uelzen-Lüchow
+    state: NI
+  '2348':
+    name: Verden  (Aller)
+    state: NI
+  '2349':
+    name: Wesermünde
+    state: NI
+  '2350':
+    name: Winsen (Luhe)
+    state: NI
+  '2351':
+    name: Wolfenbüttel
+    state: NI
+  '2352':
+    name: Zeven
+    state: NI
+  '2353':
+    name: Papenburg
+    state: NI
+  '2354':
+    name: Aurich-Wittmund
+    state: NI
+  '2355':
+    name: Bad Bentheim
+    state: NI
+  '2356':
+    name: Cloppenburg
+    state: NI
+  '2357':
+    name: Delmenhorst
+    state: NI
+  '2358':
+    name: Emden-Norden
+    state: NI
+  '2360':
+    name: Leer (Ostfriesland)
+    state: NI
+  '2361':
+    name: Lingen (Ems)
+    state: NI
+  '2363':
+    name: Nordenham
+    state: NI
+  '2364':
+    name: Oldenburg (Oldb)
+    state: NI
+  '2365':
+    name: Osnabrück-Land
+    state: NI
+  '2366':
+    name: Osnabrück-Stadt
+    state: NI
+  '2367':
+    name: Quakenbrück
+    state: NI
+  '2368':
+    name: Vechta
+    state: NI
+  '2369':
+    name: Westerstede
+    state: NI
+  '2370':
+    name: Wilhelmshaven
+    state: NI
+  '2380':
+    name: Braunschweig für Großbetriebsprüfung
+    state: NI
+  '2381':
+    name: Göttingen für Großbetriebsprüfung
+    state: NI
+  '2382':
+    name: Hannover für Großbetriebsprüfung
+    state: NI
+  '2384':
+    name: Stade für Großbetriebsprüfung
+    state: NI
+  '2385':
+    name: Oldenburg für Großbetriebsprüfung
+    state: NI
+  '2386':
+    name: Osnabrück für Großbetriebsprüfung
+    state: NI
+  '2390':
+    name: für Fahndung und Strafsachen Braunschweig
+    state: NI
+  '2391':
+    name: Hannover für Fahndung und Strafsachen
+    state: NI
+  '2392':
+    name: Lüneburg für Fahndung und Strafsachen
+    state: NI
+  '2393':
+    name: Oldenburg für Fahndung und Strafsachen
+    state: NI
+  '2457':
+    name: Bremerhaven Bewertung Bremen
+    state: HB
+  '2460':
+    name: Bremen
+    state: HB
+  '2471':
+    name: Landeshauptkasse Bremen
+    state: HB
+  '2475':
+    name: Bremerhaven
+    state: HB
+  '2477':
+    name: Bremerhaven Bewertung
+    state: HB
+  '2478':
+    name: Bremen für Außenprüfung
+    state: HB
+  '2601':
+    name: Alsfeld-Lauterbach Verwaltungsstelle Alsfeld
+    state: HE
+  '2602':
+    name: Hersfeld-Rotenburg
+    state: HE
+  '2603':
+    name: Bad Homburg vor der Höhe
+    state: HE
+  '2604':
+    name: Rheingau-Taunus
+    state: HE
+  '2605':
+    name: Bensheim
+    state: HE
+  '2606':
+    name: Marburg-Biedenkopf Verwaltungsstelle Biedenkopf
+    state: HE
+  '2607':
+    name: Darmstadt
+    state: HE
+  '2608':
+    name: Dieburg
+    state: HE
+  '2609':
+    name: Dillenburg
+    state: HE
+  '2610':
+    name: Werra-Meißner Verwaltungsstelle Eschwege
+    state: HE
+  '2611':
+    name: Korbach-Frankenberg Verwaltungsstelle Frankenberg
+    state: HE
+  '2614':
+    name: Frankfurt am Main
+    state: HE
+  '2616':
+    name: Friedberg (Hessen)
+    state: HE
+  '2618':
+    name: Fulda
+    state: HE
+  '2619':
+    name: Gelnhausen
+    state: HE
+  '2620':
+    name: Gießen
+    state: HE
+  '2621':
+    name: Groß-Gerau
+    state: HE
+  '2622':
+    name: Hanau
+    state: HE
+  '2623':
+    name: Kassel (Grundstücksbewertung)
+    state: HE
+  '2624':
+    name: Schwalm-Eder Verwaltungsstelle Fritzlar
+    state: HE
+  '2625':
+    name: Kassel (Grundstücksbewertung)
+    state: HE
+  '2626':
+    name: Kassel
+    state: HE
+  '2627':
+    name: Korbach-Frankenberg Verwaltungsstelle Korbach
+    state: HE
+  '2628':
+    name: Langen
+    state: HE
+  '2629':
+    name: Alsfeld-Lauterbach Verwaltungsstelle Lauterbach
+    state: HE
+  '2630':
+    name: Limburg-Weilburg
+    state: HE
+  '2631':
+    name: Marburg-Biedenkopf Verwaltungsstelle Marburg
+    state: HE
+  '2632':
+    name: Schwalm-Eder Verwaltungsstelle Melsungen
+    state: HE
+  '2633':
+    name: Michelstadt
+    state: HE
+  '2634':
+    name: Nidda
+    state: HE
+  '2636':
+    name: Hersfeld-Rotenburg (Grundstücksbewertung)
+    state: HE
+  '2637':
+    name: Rheingau-Taunus (Grundstücksbewertung)
+    state: HE
+  '2638':
+    name: Limburg-Weilburg (Grundstücksbewertung)
+    state: HE
+  '2639':
+    name: Wetzlar
+    state: HE
+  '2640':
+    name: Wiesbaden
+    state: HE
+  '2641':
+    name: Werra-Meißner Verwaltungsstelle Witzenhausen
+    state: HE
+  '2642':
+    name: Schwalm-Eder Verwaltungsstelle Schwalmstadt
+    state: HE
+  '2644':
+    name: Offenbach am Main
+    state: HE
+  '2645':
+    name: Frankfurt am Main (Grundstücksbewertung)
+    state: HE
+  '2646':
+    name: Hofheim am Taunus
+    state: HE
+  '2701':
+    name: Bad Neuenahr-Ahrweiler
+    state: RP
+  '2702':
+    name: Altenkirchen-Hachenburg
+    state: RP
+  '2706':
+    name: Bad Kreuznach
+    state: RP
+  '2708':
+    name: Bingen-Alzey
+    state: RP
+  '2709':
+    name: Idar-Oberstein
+    state: RP
+  '2710':
+    name: Bitburg-Prüm
+    state: RP
+  '2713':
+    name: Idar-Oberstein - Landesfinanzkasse
+    state: RP
+  '2719':
+    name: Kaiserslautern
+    state: RP
+  '2722':
+    name: Koblenz
+    state: RP
+  '2723':
+    name: Kusel-Landstuhl
+    state: RP
+  '2724':
+    name: Landau
+    state: RP
+  '2726':
+    name: Mainz
+    state: RP
+  '2727':
+    name: Ludwigshafen
+    state: RP
+  '2729':
+    name: Mayen
+    state: RP
+  '2730':
+    name: Montabaur-Diez
+    state: RP
+  '2731':
+    name: Neustadt
+    state: RP
+  '2732':
+    name: Neuwied
+    state: RP
+  '2734':
+    name: Kusel-Landstuhl für Erb/Schenk.St. Saarland
+    state: RP
+  '2735':
+    name: Pirmasens
+    state: RP
+  '2740':
+    name: Simmern-Zell
+    state: RP
+  '2741':
+    name: Speyer-Germersheim
+    state: RP
+  '2742':
+    name: Trier
+    state: RP
+  '2743':
+    name: Wittlich
+    state: RP
+  '2744':
+    name: Worms-Kirchheimbolanden
+    state: RP
+  '2801':
+    name: Offenburg -01- (vormals ASt Achern)
+    state: BW
+  '2804':
+    name: Villingen-Schwenningen Außenstelle Donaueschingen
+    state: BW
+  '2805':
+    name: Emmendingen
+    state: BW
+  '2806':
+    name: Freiburg-Stadt
+    state: BW
+  '2807':
+    name: Freiburg-Land
+    state: BW
+  '2808':
+    name: Offenburg Außenstelle Kehl
+    state: BW
+  '2809':
+    name: Konstanz
+    state: BW
+  '2810':
+    name: Lahr
+    state: BW
+  '2811':
+    name: Lörrach
+    state: BW
+  '2812':
+    name: Müllheim
+    state: BW
+  '2813':
+    name: Freiburg-Land Außenstelle Titisee-Neustadt
+    state: BW
+  '2814':
+    name: Offenburg -14-
+    state: BW
+  '2815':
+    name: Rottweil Außenstelle Oberndorf
+    state: BW
+  '2816':
+    name: Waldshut-Tiengen Außenstelle Bad Säckingen
+    state: BW
+  '2818':
+    name: Singen
+    state: BW
+  '2819':
+    name: Rottweil
+    state: BW
+  '2820':
+    name: Waldshut-Tiengen
+    state: BW
+  '2821':
+    name: Tuttlingen
+    state: BW
+  '2822':
+    name: Villingen-Schwenningen
+    state: BW
+  '2823':
+    name: Offenburg Außenstelle Wolfach
+    state: BW
+  '2830':
+    name: Bruchsal
+    state: BW
+  '2831':
+    name: Ettlingen
+    state: BW
+  '2832':
+    name: Heidelberg
+    state: BW
+  '2833':
+    name: Baden-Baden
+    state: BW
+  '2834':
+    name: Karlsruhe-Durlach
+    state: BW
+  '2835':
+    name: Karlsruhe-Stadt
+    state: BW
+  '2836':
+    name: Baden-Baden Außenstelle Bühl
+    state: BW
+  '2837':
+    name: Mannheim-Neckarstadt
+    state: BW
+  '2838':
+    name: Mannheim-Stadt
+    state: BW
+  '2839':
+    name: Rastatt
+    state: BW
+  '2840':
+    name: Mosbach
+    state: BW
+  '2841':
+    name: Pforzheim
+    state: BW
+  '2842':
+    name: Freudenstadt
+    state: BW
+  '2843':
+    name: Schwetzingen
+    state: BW
+  '2844':
+    name: Sinsheim
+    state: BW
+  '2845':
+    name: Calw
+    state: BW
+  '2846':
+    name: Mosbach Außenstelle Walldürn
+    state: BW
+  '2847':
+    name: Weinheim
+    state: BW
+  '2848':
+    name: Mühlacker
+    state: BW
+  '2849':
+    name: Pforzheim Außenstelle Neuenbürg
+    state: BW
+  '2850':
+    name: Aalen
+    state: BW
+  '2851':
+    name: Backnang
+    state: BW
+  '2852':
+    name: Tauberbischofsheim Außenstelle Bad Mergentheim
+    state: BW
+  '2853':
+    name: Balingen
+    state: BW
+  '2854':
+    name: Biberach
+    state: BW
+  '2855':
+    name: Bietigheim-Bissingen
+    state: BW
+  '2856':
+    name: Böblingen
+    state: BW
+  '2857':
+    name: Schwäbisch Hall Außenstelle Crailsheim
+    state: BW
+  '2858':
+    name: Ehingen
+    state: BW
+  '2859':
+    name: Esslingen
+    state: BW
+  '2861':
+    name: Friedrichshafen
+    state: BW
+  '2862':
+    name: Göppingen Außenstelle Geislingen
+    state: BW
+  '2863':
+    name: Göppingen
+    state: BW
+  '2864':
+    name: Heidenheim
+    state: BW
+  '2865':
+    name: Heilbronn
+    state: BW
+  '2869':
+    name: Nürtingen Außenstelle Kirchheim
+    state: BW
+  '2870':
+    name: Leonberg
+    state: BW
+  '2871':
+    name: Ludwigsburg
+    state: BW
+  '2874':
+    name: Nürtingen
+    state: BW
+  '2876':
+    name: Öhringen
+    state: BW
+  '2877':
+    name: Ravensburg
+    state: BW
+  '2878':
+    name: Reutlingen
+    state: BW
+  '2879':
+    name: Biberach Außenstelle Riedlingen
+    state: BW
+  '2880':
+    name: Tauberbischofsheim
+    state: BW
+  '2881':
+    name: Sigmaringen Außenstelle Bad Saulgau
+    state: BW
+  '2882':
+    name: Schorndorf
+    state: BW
+  '2883':
+    name: Schwäbisch Gmünd
+    state: BW
+  '2884':
+    name: Schwäbisch Hall
+    state: BW
+  '2885':
+    name: Sigmaringen
+    state: BW
+  '2886':
+    name: Tübingen
+    state: BW
+  '2887':
+    name: Überlingen (Bodensee)
+    state: BW
+  '2888':
+    name: Ulm
+    state: BW
+  '2889':
+    name: Bad Urach
+    state: BW
+  '2890':
+    name: Waiblingen
+    state: BW
+  '2891':
+    name: Wangen
+    state: BW
+  '2892':
+    name: Stuttgart IV
+    state: BW
+  '2893':
+    name: Stuttgart I
+    state: BW
+  '2895':
+    name: Stuttgart II
+    state: BW
+  '2896':
+    name: Stuttgart Zentrales Konzernprüfungsamt
+    state: BW
+  '2897':
+    name: Stuttgart III
+    state: BW
+  '2899':
+    name: Stuttgart-Körpersch.
+    state: BW
+  '3046':
+    name: Potsdam
+  '3048':
+    name: Brandenburg
+  '3049':
+    name: Königs Wusterhausen
+  '3050':
+    name: Luckenwalde
+  '3051':
+    name: Nauen
+  '3052':
+    name: Kyritz
+  '3053':
+    name: Oranienburg
+  '3056':
+    name: Cottbus
+  '3057':
+    name: Calau
+  '3061':
+    name: Frankfurt (Oder)
+  '3062':
+    name: Angermünde
+  '3064':
+    name: Strausberg
+  '3065':
+    name: Eberswalde
+  '3102':
+    name: Magdeburg
+  '3103':
+    name: Genthin
+  '3105':
+    name: Haldensleben
+  '3106':
+    name: Salzwedel
+  '3107':
+    name: Staßfurt
+  '3108':
+    name: Stendal
+  '3110':
+    name: Halle (Saale)
+  '3112':
+    name: Merseburg
+  '3114':
+    name: Dessau-Roßlau
+  '3115':
+    name: Wittenberg
+  '3116':
+    name: Bitterfeld-Wolfen
+  '3117':
+    name: Quedlinburg
+  '3118':
+    name: Eisleben
+  '3119':
+    name: Naumburg
+  '3202':
+    name: Dresden-Nord
+  '3203':
+    name: Dresden-Süd
+  '3204':
+    name: Bautzen
+  '3207':
+    name: Görlitz
+  '3208':
+    name: Löbau
+  '3209':
+    name: Meißen
+  '3210':
+    name: Pirna
+  '3213':
+    name: Hoyerswerda
+  '3214':
+    name: Chemnitz-Süd
+  '3215':
+    name: Chemnitz-Mitte
+  '3217':
+    name: Annaberg
+  '3218':
+    name: Schwarzenberg
+  '3220':
+    name: Freiberg
+  '3222':
+    name: Mittweida
+  '3223':
+    name: Plauen
+  '3224':
+    name: Stollberg
+  '3227':
+    name: Zwickau
+  '3228':
+    name: Zschopau
+  '3231':
+    name: Leipzig II
+  '3232':
+    name: Leipzig I
+  '3236':
+    name: Döbeln
+  '3237':
+    name: Eilenburg
+  '3238':
+    name: Grimma
+  '3239':
+    name: Oschatz
+  '4069':
+    name: Neubrandenburg - RAB
+  '4070':
+    name: Neubrandenburg - RIA (Rentenempfänger im Ausland)
+  '4072':
+    name: Neubrandenburg
+  '4075':
+    name: Waren
+  '4079':
+    name: Rostock
+  '4080':
+    name: Wismar
+  '4081':
+    name: Ribnitz-Damgarten
+  '4082':
+    name: Stralsund
+  '4084':
+    name: Greifswald
+  '4086':
+    name: Güstrow
+  '4087':
+    name: Hagenow
+  '4090':
+    name: Schwerin
+  '4151':
+    name: Erfurt
+  '4154':
+    name: Ilmenau
+  '4155':
+    name: Eisenach
+  '4156':
+    name: Gotha
+  '4157':
+    name: Mühlhausen
+  '4159':
+    name: Sondershausen
+  '4161':
+    name: Gera
+  '4162':
+    name: Jena
+  '4165':
+    name: Pößneck
+  '4166':
+    name: Altenburg
+  '4170':
+    name: Südthüringen
+  '4171':
+    name: Südthüringen
+  '5101':
+    name: Dinslaken
+    state: NW
+  '5102':
+    name: Viersen
+    state: NW
+  '5103':
+    name: Düsseldorf-Altstadt
+    state: NW
+  '5105':
+    name: Düsseldorf-Nord
+    state: NW
+  '5106':
+    name: Düsseldorf-Süd
+    state: NW
+  '5107':
+    name: Duisburg-Hamborn
+    state: NW
+  '5109':
+    name: Duisburg-Süd
+    state: NW
+  '5111':
+    name: Essen-NordOst
+    state: NW
+  '5112':
+    name: Essen-Süd
+    state: NW
+  '5113':
+    name: Geldern
+    state: NW
+  '5114':
+    name: Grevenbroich
+    state: NW
+  '5115':
+    name: Kempen
+    state: NW
+  '5116':
+    name: Kleve
+    state: NW
+  '5117':
+    name: Krefeld
+    state: NW
+  '5119':
+    name: Kamp-Lintfort
+    state: NW
+  '5120':
+    name: Mülheim an der Ruhr
+    state: NW
+  '5121':
+    name: Mönchengladbach
+    state: NW
+  '5122':
+    name: Neuss
+    state: NW
+  '5123':
+    name: Oberhausen-Nord
+    state: NW
+  '5124':
+    name: Oberhausen-Süd
+    state: NW
+  '5126':
+    name: Remscheid
+    state: NW
+  '5128':
+    name: Solingen
+    state: NW
+  '5130':
+    name: Wesel
+    state: NW
+  '5131':
+    name: Wuppertal-Barmen
+    state: NW
+  '5132':
+    name: Wuppertal-Elberfeld
+    state: NW
+  '5133':
+    name: Düsseldorf-Mitte
+    state: NW
+  '5134':
+    name: Duisburg-West
+    state: NW
+  '5135':
+    name: Hilden
+    state: NW
+  '5139':
+    name: Velbert
+    state: NW
+  '5147':
+    name: Düsseldorf-Mettmann
+    state: NW
+  '5170':
+    name: Düsseldorf I für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5171':
+    name: Düsseldorf II für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5172':
+    name: Essen für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5173':
+    name: Krefeld für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5174':
+    name: Bergisches Land für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5176':
+    name: Mönchengladbach für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5201':
+    name: Aachen-Stadt
+    state: NW
+  '5202':
+    name: Aachen-Kreis
+    state: NW
+  '5203':
+    name: Bergheim
+    state: NW
+  '5204':
+    name: Bergisch Gladbach
+    state: NW
+  '5205':
+    name: Bonn-Innenstadt
+    state: NW
+  '5206':
+    name: Bonn-Außenstadt
+    state: NW
+  '5207':
+    name: Düren
+    state: NW
+  '5208':
+    name: Erkelenz
+    state: NW
+  '5209':
+    name: Euskirchen
+    state: NW
+  '5210':
+    name: Geilenkirchen
+    state: NW
+  '5211':
+    name: Schleiden
+    state: NW
+  '5212':
+    name: Gummersbach
+    state: NW
+  '5213':
+    name: Jülich
+    state: NW
+  '5214':
+    name: Köln-Altstadt
+    state: NW
+  '5215':
+    name: Köln-Mitte
+    state: NW
+  '5216':
+    name: Köln-Porz
+    state: NW
+  '5217':
+    name: Köln-Nord
+    state: NW
+  '5218':
+    name: Köln-Ost
+    state: NW
+  '5219':
+    name: Köln-Süd
+    state: NW
+  '5220':
+    name: Siegburg
+    state: NW
+  '5221':
+    name: Wipperfürth
+    state: NW
+  '5222':
+    name: Sankt Augustin
+    state: NW
+  '5223':
+    name: Köln-West
+    state: NW
+  '5224':
+    name: Brühl
+    state: NW
+  '5230':
+    name: Leverkusen
+    state: NW
+  '5270':
+    name: Köln für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5271':
+    name: Aachen für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5272':
+    name: Bonn für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5301':
+    name: Ahaus
+    state: NW
+  '5302':
+    name: Altena
+    state: NW
+  '5303':
+    name: Arnsberg
+    state: NW
+  '5304':
+    name: Beckum
+    state: NW
+  '5305':
+    name: Bielefeld-Innenstadt
+    state: NW
+  '5306':
+    name: Bochum-Mitte
+    state: NW
+  '5307':
+    name: Borken
+    state: NW
+  '5308':
+    name: Bottrop
+    state: NW
+  '5309':
+    name: Brilon
+    state: NW
+  '5310':
+    name: Bünde
+    state: NW
+  '5311':
+    name: Steinfurt
+    state: NW
+  '5312':
+    name: Coesfeld
+    state: NW
+  '5313':
+    name: Detmold
+    state: NW
+  '5314':
+    name: Dortmund-West
+    state: NW
+  '5315':
+    name: Dortmund-Hörde
+    state: NW
+  '5316':
+    name: Dortmund-Unna
+    state: NW
+  '5317':
+    name: Dortmund-Ost
+    state: NW
+  '5319':
+    name: Gelsenkirchen
+    state: NW
+  '5321':
+    name: Hagen
+    state: NW
+  '5322':
+    name: Hamm
+    state: NW
+  '5323':
+    name: Hattingen
+    state: NW
+  '5324':
+    name: Herford
+    state: NW
+  '5325':
+    name: Herne
+    state: NW
+  '5326':
+    name: Höxter
+    state: NW
+  '5327':
+    name: Ibbenbüren
+    state: NW
+  '5328':
+    name: Iserlohn
+    state: NW
+  '5329':
+    name: Lemgo
+    state: NW
+  '5330':
+    name: Lippstadt
+    state: NW
+  '5331':
+    name: Lübbecke
+    state: NW
+  '5332':
+    name: Lüdenscheid
+    state: NW
+  '5333':
+    name: Lüdinghausen
+    state: NW
+  '5334':
+    name: Meschede
+    state: NW
+  '5335':
+    name: Minden
+    state: NW
+  '5336':
+    name: Münster-Außenstadt
+    state: NW
+  '5337':
+    name: Münster-Innenstadt
+    state: NW
+  '5338':
+    name: Olpe
+    state: NW
+  '5339':
+    name: Paderborn
+    state: NW
+  '5340':
+    name: Recklinghausen
+    state: NW
+  '5341':
+    name: Schwelm
+    state: NW
+  '5342':
+    name: Siegen
+    state: NW
+  '5343':
+    name: Soest
+    state: NW
+  '5345':
+    name: Warburg
+    state: NW
+  '5346':
+    name: Warendorf
+    state: NW
+  '5347':
+    name: Wiedenbrück
+    state: NW
+  '5348':
+    name: Witten
+    state: NW
+  '5349':
+    name: Bielefeld-Außenstadt
+    state: NW
+  '5350':
+    name: Bochum-Süd
+    state: NW
+  '5351':
+    name: Gütersloh
+    state: NW
+  '5359':
+    name: Marl
+    state: NW
+  '5371':
+    name: Bielefeld für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5372':
+    name: Herne für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5373':
+    name: Detmold für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5374':
+    name: Dortmund für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5375':
+    name: Hagen für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5376':
+    name: Münster für Groß- und Konzernbetriebsprüfung
+    state: NW
+  '5380':
+    name: Landesamt zur Bekämpfung der Finanzkriminalität
+    state: NW
+  '9101':
+    name: Augsburg-Stadt Arbeitnehmerbereich
+    state: BY
+  '9102':
+    name: Augsburg-Land
+    state: BY
+  '9103':
+    name: Augsburg-Stadt
+    state: BY
+  '9104':
+    name: Wolfratshausen - Bad Tölz
+    state: BY
+  '9105':
+    name: Berchtesgaden-Laufen
+    state: BY
+  '9106':
+    name: Burghausen
+    state: BY
+  '9107':
+    name: Dachau
+    state: BY
+  '9108':
+    name: Deggendorf
+    state: BY
+  '9109':
+    name: Dillingen
+    state: BY
+  '9110':
+    name: Dingolfing
+    state: BY
+  '9111':
+    name: Nördlingen mit ASt Donauwörth
+    state: BY
+  '9112':
+    name: Ebersberg
+    state: BY
+  '9113':
+    name: Eggenfelden
+    state: BY
+  '9114':
+    name: Erding
+    state: BY
+  '9115':
+    name: Freising
+    state: BY
+  '9116':
+    name: Bundeszentralamt für Steuern
+    state: BY
+  '9117':
+    name: Fürstenfeldbruck
+    state: BY
+  '9119':
+    name: Garmisch-Partenkirchen
+    state: BY
+  '9121':
+    name: Günzburg
+    state: BY
+  '9123':
+    name: Kempten-Immenstadt
+    state: BY
+  '9124':
+    name: Ingolstadt
+    state: BY
+  '9125':
+    name: Kaufbeuren m. ASt Füssen
+    state: BY
+  '9126':
+    name: Kelheim
+    state: BY
+  '9127':
+    name: Kempten-Immenstadt
+    state: BY
+  '9131':
+    name: Landsberg am Lech
+    state: BY
+  '9132':
+    name: Landshut
+    state: BY
+  '9134':
+    name: Lindau
+    state: BY
+  '9138':
+    name: Memmingen-Mindelheim
+    state: BY
+  '9139':
+    name: Miesbach
+    state: BY
+  '9140':
+    name: Memmingen-Mindelheim
+    state: BY
+  '9141':
+    name: Mühldorf
+    state: BY
+  '9142':
+    name: München Bewertung des Grundbesitzes
+    state: BY
+  '9143':
+    name: München Körperschaften/PersonenGesellschaften
+    state: BY
+  '9144':
+    name: München Gewinneinkünfte
+    state: BY
+  '9145':
+    name: München Gewinneinkünfte
+    state: BY
+  '9146':
+    name: München Gewinneinkünfte
+    state: BY
+  '9147':
+    name: München Gewinneinkünfte
+    state: BY
+  '9148':
+    name: München Gewinneinkünfte
+    state: BY
+  '9149':
+    name: München Erhebung
+    state: BY
+  '9151':
+    name: Neu-Ulm
+    state: BY
+  '9152':
+    name: Nördlingen mit ASt Donauwörth
+    state: BY
+  '9153':
+    name: Passau mit Außenstellen
+    state: BY
+  '9154':
+    name: Pfaffenhofen
+    state: BY
+  '9156':
+    name: Rosenheim m. ASt Wasserburg
+    state: BY
+  '9157':
+    name: Grafenau
+    state: BY
+  '9159':
+    name: Schrobenhausen m. ASt Neuburg
+    state: BY
+  '9161':
+    name: Starnberg
+    state: BY
+  '9162':
+    name: Straubing
+    state: BY
+  '9163':
+    name: Traunstein
+    state: BY
+  '9168':
+    name: Weilheim-Schongau
+    state: BY
+  '9169':
+    name: Wolfratshausen - Bad Tölz
+    state: BY
+  '9170':
+    name: Zwiesel m. ASt Viechtach
+    state: BY
+  '9171':
+    name: Eichstätt
+    state: BY
+  '9181':
+    name: München Überschusseinkünfte
+    state: BY
+  '9182':
+    name: München Überschusseinkünfte u. Beschränkt Steuerpfl.
+    state: BY
+  '9183':
+    name: München Überschusseinkünfte
+    state: BY
+  '9184':
+    name: München Überschusseinkünfte
+    state: BY
+  '9185':
+    name: München Überschusseinkünfte
+    state: BY
+  '9187':
+    name: München Körperschaften
+    state: BY
+  '9188':
+    name: München Betriebsprüfung
+    state: BY
+  '9189':
+    name: München Erhebung
+    state: BY
+  '9201':
+    name: Amberg
+    state: BY
+  '9202':
+    name: Obernburg am Main mit Außenstelle Amorbach
+    state: BY
+  '9203':
+    name: Mittelfranken-West (203) (bis 31.12.2025 FA Ansbach mit Außenstellen)
+    state: BY
+  '9204':
+    name: Aschaffenburg
+    state: BY
+  '9205':
+    name: Bad Kissingen
+    state: BY
+  '9206':
+    name: Bad Neustadt a.d.S.
+    state: BY
+  '9207':
+    name: Bamberg
+    state: BY
+  '9208':
+    name: Bayreuth
+    state: BY
+  '9211':
+    name: Cham mit Außenstelle Bad Kötzting
+    state: BY
+  '9212':
+    name: Coburg
+    state: BY
+  '9216':
+    name: Mittelfranken-Ost (216) (bis 31.12.2025 FA Erlangen)
+    state: BY
+  '9217':
+    name: Forchheim
+    state: BY
+  '9218':
+    name: Mittelfranken-West (218) (bis 31.12.2025 FA Fürth)
+    state: BY
+  '9220':
+    name: Mittelfranken-West (220) (bis 31.12.2025 FA Gunzenhausen)
+    state: BY
+  '9221':
+    name: Mittelfranken-Ost (221) (bis 31.12.2025 FA Hersbruck)
+    state: BY
+  '9222':
+    name: Mittelfranken-Ost (222) (bis 31.12.2025 FA Hilpoltstein)
+    state: BY
+  '9223':
+    name: Hof mit Außenstellen
+    state: BY
+  '9227':
+    name: Kitzingen
+    state: BY
+  '9228':
+    name: Kronach
+    state: BY
+  '9229':
+    name: Kulmbach
+    state: BY
+  '9230':
+    name: Lichtenfels
+    state: BY
+  '9231':
+    name: Lohr a. Main mit Außenstellen
+    state: BY
+  '9232':
+    name: Lohr a. Main mit Außenstellen - Grunderwerbsteuer
+    state: BY
+  '9235':
+    name: Neumarkt i.d.Opf.
+    state: BY
+  '9238':
+    name: Nürnberg (238) (bis 31.12.2025 FA Nürnberg-Nord)
+    state: BY
+  '9240':
+    name: Nürnberg (240) (bis 31.12.2025 FA Nürnberg-Süd)
+    state: BY
+  '9241':
+    name: Nürnberg (241) (bis 31.12.2025 FA Nürnberg-Zentral)
+    state: BY
+  '9244':
+    name: Regensburg
+    state: BY
+  '9247':
+    name: Mittelfranken-Ost (247) (bis 31.12.2025 FA Schwabach)
+    state: BY
+  '9248':
+    name: Schwandorf mit Außenstelle Neunburg v. W.
+    state: BY
+  '9249':
+    name: Schweinfurt
+    state: BY
+  '9252':
+    name: Mittelfranken-West (252) (bis 31.12.2025 FA Uffenheim)
+    state: BY
+  '9254':
+    name: Waldsassen
+    state: BY
+  '9255':
+    name: Weiden i.d.Opf.
+    state: BY
+  '9257':
+    name: Würzburg mit Außenstelle Ochsenfurt
+    state: BY
+  '9258':
+    name: Wunsiedel mit Außenstelle Selb
+    state: BY
+  '9259':
+    name: Zeil am Main mit Außenstelle Ebern
+    state: BY

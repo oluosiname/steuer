@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'state_mapping'
+require_relative 'finanzamt_registry'
 
 module Steuer
   class Steuernummer
@@ -74,6 +75,19 @@ module Steuer
       return unless @state_code
 
       StateMapping::STATES[@state_code][:name]
+    end
+
+    # The BUFA-Nr: the leading four digits of the federal-13 form, identifying
+    # the issuing Finanzamt (the Empfaenger in an ELSTER transmission).
+    def finanzamt_code
+      to_federal_13&.slice(0, 4)
+    end
+
+    def finanzamt_name
+      code = finanzamt_code
+      return unless code
+
+      FinanzamtRegistry.name_for(code)
     end
 
     def format_type
